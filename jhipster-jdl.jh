@@ -1,0 +1,61 @@
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+entity Country {
+	name String required maxlength(50)
+}
+
+entity Customer {
+    name String required maxlength(100)
+    language Language required
+	streetAddress String maxlength(100)
+	postalCode String maxlength(6)
+	city String maxlength(30)
+}
+relationship ManyToOne {
+	Customer{country(name)} to Country
+    Customer{defaultTerms(name)} to PaymentTerms
+}
+
+entity PaymentTerms {
+  name String required maxlength(20)
+  days Integer required
+}
+
+entity Item {
+  name String required maxlength(100)
+  price BigDecimal required
+}
+
+entity Invoice {
+  number String required maxlength(10)
+  date Instant required
+}
+relationship ManyToOne {
+	Invoice{customer(name) required} to Customer
+    Invoice{terms(name) required} to PaymentTerms
+}
+
+entity InvoiceLineItem {
+  quantity Float required
+  description String maxlength(100)
+  amount BigDecimal required
+}
+relationship ManyToOne {
+    InvoiceLineItem{invoice required} to Invoice
+	InvoiceLineItem{item(name) required} to Item
+}
+
+// Set pagination options
+paginate Invoice, Customer with infinite-scroll
+paginate * with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except InvoiceLineItem
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

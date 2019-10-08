@@ -1,0 +1,23 @@
+{
+  "javatrainingApp": {
+    "item": {
+      "home": {
+        "title": "Items",
+        "createLabel": "Maak een nieuwe Item",
+        "createOrEditLabel": "Maak of wijzig een Item",
+        "notFound": "No Item found"
+      },
+      "created": "A new Item is created with identifier {{ param }}",
+      "updated": "A Item is updated with identifier {{ param }}",
+      "deleted": "A Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Item {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Item"
+      },
+      "name": "Name",
+      "price": "Price"
+    }
+  }
+}

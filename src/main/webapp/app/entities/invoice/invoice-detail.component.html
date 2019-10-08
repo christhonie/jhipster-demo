@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="invoice">
+            <h2><span jhiTranslate="javatrainingApp.invoice.detail.title">Invoice</span> {{invoice.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="javatrainingApp.invoice.number">Number</span></dt>
+                <dd>
+                    <span>{{invoice.number}}</span>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoice.date">Date</span></dt>
+                <dd>
+                    <span>{{invoice.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoice.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="invoice.customer">
+                        <a [routerLink]="['/customer', invoice.customer?.id, 'view']">{{invoice.customer?.name}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoice.terms">Terms</span></dt>
+                <dd>
+                    <div *ngIf="invoice.terms">
+                        <a [routerLink]="['/payment-terms', invoice.terms?.id, 'view']">{{invoice.terms?.name}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/invoice', invoice.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

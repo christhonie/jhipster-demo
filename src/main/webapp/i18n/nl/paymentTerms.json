@@ -1,0 +1,23 @@
+{
+  "javatrainingApp": {
+    "paymentTerms": {
+      "home": {
+        "title": "Payment Terms",
+        "createLabel": "Maak een nieuwe Payment Terms",
+        "createOrEditLabel": "Maak of wijzig een Payment Terms",
+        "notFound": "No Payment Terms found"
+      },
+      "created": "A new Payment Terms is created with identifier {{ param }}",
+      "updated": "A Payment Terms is updated with identifier {{ param }}",
+      "deleted": "A Payment Terms is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Payment Terms {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Payment Terms"
+      },
+      "name": "Name",
+      "days": "Days"
+    }
+  }
+}

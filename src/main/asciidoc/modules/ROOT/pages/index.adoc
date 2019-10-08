@@ -1,0 +1,6 @@
+= JHipster Demo Application
+
+== Entities
+
+The application implements a 
+image::../images/Image-081019-110944.420.png[]

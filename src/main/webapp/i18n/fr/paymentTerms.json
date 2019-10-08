@@ -1,0 +1,23 @@
+{
+  "javatrainingApp": {
+    "paymentTerms": {
+      "home": {
+        "title": "PaymentTerms",
+        "createLabel": "Créer un nouveau Payment Terms",
+        "createOrEditLabel": "Créer ou éditer un Payment Terms",
+        "notFound": "Aucun Payment Terms trouvé"
+      },
+      "created": "Un nouveau Payment Terms a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Payment Terms avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Payment Terms avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Payment Terms {{ id }} ?"
+      },
+      "detail": {
+        "title": "Payment Terms"
+      },
+      "name": "Name",
+      "days": "Days"
+    }
+  }
+}

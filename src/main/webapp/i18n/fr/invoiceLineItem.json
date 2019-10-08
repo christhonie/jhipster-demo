@@ -1,0 +1,26 @@
+{
+  "javatrainingApp": {
+    "invoiceLineItem": {
+      "home": {
+        "title": "InvoiceLineItems",
+        "createLabel": "Créer un nouveau Invoice Line Item",
+        "createOrEditLabel": "Créer ou éditer un Invoice Line Item",
+        "notFound": "Aucun Invoice Line Item trouvé"
+      },
+      "created": "Un nouveau Invoice Line Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Invoice Line Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Invoice Line Item avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Invoice Line Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Invoice Line Item"
+      },
+      "quantity": "Quantity",
+      "description": "Description",
+      "amount": "Amount",
+      "invoice": "Invoice",
+      "item": "Item"
+    }
+  }
+}

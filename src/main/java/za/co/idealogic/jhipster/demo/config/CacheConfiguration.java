@@ -45,6 +45,12 @@ public class CacheConfiguration {
             createCache(cm, za.co.idealogic.jhipster.demo.domain.User.class.getName() + ".authorities");
             createCache(cm, za.co.idealogic.jhipster.demo.domain.PersistentToken.class.getName());
             createCache(cm, za.co.idealogic.jhipster.demo.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.Country.class.getName());
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.Customer.class.getName());
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.PaymentTerms.class.getName());
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.Item.class.getName());
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.Invoice.class.getName());
+            createCache(cm, za.co.idealogic.jhipster.demo.domain.InvoiceLineItem.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

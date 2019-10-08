@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="invoiceLineItem">
+            <h2><span jhiTranslate="javatrainingApp.invoiceLineItem.detail.title">Invoice Line Item</span> {{invoiceLineItem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="javatrainingApp.invoiceLineItem.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{invoiceLineItem.quantity}}</span>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoiceLineItem.description">Description</span></dt>
+                <dd>
+                    <span>{{invoiceLineItem.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoiceLineItem.amount">Amount</span></dt>
+                <dd>
+                    <span>{{invoiceLineItem.amount}}</span>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoiceLineItem.invoice">Invoice</span></dt>
+                <dd>
+                    <div *ngIf="invoiceLineItem.invoice">
+                        <a [routerLink]="['/invoice', invoiceLineItem.invoice?.id, 'view']">{{invoiceLineItem.invoice?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="javatrainingApp.invoiceLineItem.item">Item</span></dt>
+                <dd>
+                    <div *ngIf="invoiceLineItem.item">
+                        <a [routerLink]="['/item', invoiceLineItem.item?.id, 'view']">{{invoiceLineItem.item?.name}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/invoice-line-item', invoiceLineItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

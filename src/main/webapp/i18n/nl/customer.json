@@ -1,0 +1,28 @@
+{
+  "javatrainingApp": {
+    "customer": {
+      "home": {
+        "title": "Customers",
+        "createLabel": "Maak een nieuwe Customer",
+        "createOrEditLabel": "Maak of wijzig een Customer",
+        "notFound": "No Customer found"
+      },
+      "created": "A new Customer is created with identifier {{ param }}",
+      "updated": "A Customer is updated with identifier {{ param }}",
+      "deleted": "A Customer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Customer {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "name": "Name",
+      "language": "Language",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "country": "Country",
+      "defaultTerms": "Default Terms"
+    }
+  }
+}

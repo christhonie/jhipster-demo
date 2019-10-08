@@ -1,0 +1,54 @@
+{
+    "name": "InvoiceLineItem",
+    "fields": [
+        {
+            "fieldName": "quantity",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "BigDecimal",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "invoice",
+            "otherEntityRelationshipName": "invoiceLineItem",
+            "relationshipValidateRules": "required",
+            "relationshipName": "invoice",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "item",
+            "otherEntityRelationshipName": "invoiceLineItem",
+            "relationshipValidateRules": "required",
+            "relationshipName": "item",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20191008080142",
+    "entityTableName": "invoice_line_item",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
